@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公館紅棗專賣店 | 智慧農業與 AI 諮詢</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Google Fonts (Noto Sans TC) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 引入 Lucide 圖標庫 -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        .bg-red-hakka { background-color: #A61D24; } /* 胭脂紅/客家紅自定義色 */
+        .text-red-hakka { color: #A61D24; }
+        .glass-morphism { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .hidden-section { display: none; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- 導覽列 -->
+    <nav class="fixed w-full z-50 glass-morphism border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="leaf" class="text-green-600"></i>
+                    <span class="text-xl font-bold tracking-wider text-red-hakka">公館紅棗智慧商城</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-red-hakka transition">品牌故事</a>
+                    <a href="#monitor" class="hover:text-red-hakka transition">生長監測</a>
+                    <a href="#shop" class="hover:text-red-hakka transition">即刻下單</a>
+                    <a href="#omo" class="hover:text-red-hakka transition">線下取貨</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="relative p-2 hover:bg-stone-100 rounded-full">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="absolute top-0 right-0 bg-red-hakka text-white text-xs rounded-full px-1.5">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主視覺區 (Hero) -->
+    <section id="home" class="pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 space-y-6">
+                <h2 class="text-stone-500 font-medium tracking-widest">苗栗公館・石墻村</h2>
+                <h1 class="text-5xl font-bold leading-tight">每一顆紅棗，<br><span class="text-red-hakka">都是陽光與AI的結晶</span></h1>
+                <p class="text-lg text-stone-600 leading-relaxed">
+                    結合傳統客家智慧與現代物聯網技術。我們不只賣紅棗，更讓你參與紅棗的成長過程。
+                </p>
+                <div class="flex gap-4">
+                    <a href="#shop" class="bg-red-hakka text-white px-8 py-3 rounded-lg shadow-lg hover:opacity-90 transition">探索產品</a>
+                    <a href="#monitor" class="border border-stone-300 px-8 py-3 rounded-lg hover:bg-white transition">查看果園直播</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <div class="rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&q=80&w=1000" alt="紅棗近照" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 生長監測儀表板 (AIoT) -->
+    <section id="monitor" class="py-20 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold">果園即時監測儀表板</h2>
+                    <p class="text-stone-500">當前位置：公館石墻區 03 號測試田</p>
+                </div>
+                <span class="flex items-center gap-2 text-green-600 font-medium animate-pulse">
+                    <span class="w-2 h-2 bg-green-600 rounded-full"></span> 即時數據傳輸中
+                </span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <i data-lucide="thermometer" class="text-orange-500"></i>
+                        <span class="text-xs bg-stone-100 px-2 py-1 rounded">24hr 平均</span>
+                    </div>
+                    <div class="text-3xl font-bold">28.5°C</div>
+                    <p class="text-sm text-stone-500 mt-2">環境溫度：適合果實轉色</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <i data-lucide="droplets" class="text-blue-500"></i>
+                        <span class="text-xs bg-stone-100 px-2 py-1 rounded">土壤濕度</span>
+                    </div>
+                    <div class="text-3xl font-bold">65%</div>
+                    <p class="text-sm text-stone-500 mt-2">自動滴灌系統：待命中</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <i data-lucide="sun" class="text-yellow-500"></i>
+                        <span class="text-xs bg-stone-100 px-2 py-1 rounded">日照強度</span>
+                    </div>
+                    <div class="text-3xl font-bold">850W/m²</div>
+                    <p class="text-sm text-stone-500 mt-2">光合作用效率：極佳</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <i data-lucide="shield-check" class="text-green-500"></i>
+                        <span class="text-xs bg-stone-100 px-2 py-1 rounded">溯源編號</span>
+                    </div>
+                    <div class="text-xl font-mono font-bold">GKG-2024-001</div>
+                    <p class="text-sm text-stone-500 mt-2">無農藥殘留檢測：合格</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商品商城 -->
+    <section id="shop" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">嚴選公館農產</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 商品卡片 1 -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-sm border hover:shadow-md transition">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596541223130-5d31a73fb6c6?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-xs font-bold text-red-hakka">年度冠軍</span>
+                            <span class="text-stone-400 text-xs">庫存剩餘 15 件</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">極品特級乾紅棗</h3>
+                        <p class="text-stone-500 text-sm mb-4">自然日曬乾燥，保留最完整的環磷酸腺苷(cAMP)營養成分。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-red-hakka">$350</span>
+                            <button onclick="addToCart()" class="bg-stone-900 text-white p-2 rounded-lg hover:bg-red-hakka transition">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他商品卡片... (可重複) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- OMO 區塊 -->
+    <section id="omo" class="py-20 bg-red-hakka text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">線上訂、線下領：體驗客家風情</h2>
+            <p class="text-red-100 max-w-2xl mx-auto mb-10">
+                我們整合了全通路物流服務。您可以選擇宅配到府，或是在週末前往「苗栗客家文化館」櫃檯領貨，現場感受苗栗的山水與人文故事。
+            </p>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
+                    <i data-lucide="truck" class="mx-auto mb-4 w-12 h-12 text-white"></i>
+                    <h3 class="text-xl font-bold mb-2">快速配送</h3>
+                    <p class="text-sm text-red-50">全台 48 小時內新鮮到府</p>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20">
+                    <i data-lucide="store" class="mx-auto mb-4 w-12 h-12 text-white"></i>
+                    <h3 class="text-xl font-bold mb-2">文化館自取</h3>
+                    <p class="text-sm text-red-50">自取即贈送「客家花布茶墊」乙份</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI 諮詢視窗 (Floating Widget) -->
+    <div id="ai-widget" class="fixed bottom-6 right-6 z-50">
+        <!-- 展開後的對話框 -->
+        <div id="ai-chat" class="hidden flex flex-col w-80 h-96 bg-white rounded-2xl shadow-2xl border mb-4 overflow-hidden">
+            <div class="bg-red-hakka p-4 text-white flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="bot" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold">紅棗小管家</p>
+                        <p class="text-[10px] opacity-80">AI 智能助理在線中</p>
+                    </div>
+                </div>
+                <button onclick="toggleAI()"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm">
+                <div class="bg-stone-100 p-3 rounded-tr-xl rounded-br-xl rounded-bl-xl max-w-[80%]">
+                    您好！我是紅棗小管家。您可以問我紅棗怎麼煮最好喝，或是如何挑選公館特產喔！
+                </div>
+            </div>
+            <div class="p-3 border-t flex gap-2">
+                <input type="text" id="ai-input" placeholder="輸入問題..." class="flex-1 bg-stone-50 border rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-red-hakka">
+                <button onclick="sendAIQuery()" class="bg-red-hakka text-white p-2 rounded-full hover:opacity-90">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 懸浮按鈕 -->
+        <button onclick="toggleAI()" class="bg-red-hakka text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition transform active:scale-95">
+            <i data-lucide="message-circle" class="w-7 h-7"></i>
+        </button>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12">
+            <div>
+                <h4 class="text-white font-bold mb-4 italic">公館紅棗智慧商城</h4>
+                <p class="text-sm leading-loose">
+                    根植苗栗，航向國際。我們以電子商務賦能在地文化，落實公平貿易與科技農業。
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">快速連結</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">常見問題 FAQs</a></li>
+                    <li><a href="#" class="hover:text-white">隱私權政策</a></li>
+                    <li><a href="#" class="hover:text-white">農藥檢測報告</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">聯絡我們</h4>
+                <p class="text-sm">苗栗縣公館鄉石墻村村辦公處</p>
+                <p class="text-sm">服務專線：037-XXXXXX</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-stone-800 text-xs text-center">
+            &copy; 2024 公館紅棗電商專案組. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript 邏輯 -->
+    <script>
+        // 初始化 Lucide 圖標
+        lucide.createIcons();
+
+        // AI 視窗切換
+        function toggleAI() {
+            const chat = document.getElementById('ai-chat');
+            chat.classList.toggle('hidden');
+        }
+
+        // 模擬 AI 回覆邏輯
+        function sendAIQuery() {
+            const input = document.getElementById('ai-input');
+            const messages = document.getElementById('chat-messages');
+            
+            if (input.value.trim() === '') return;
+
+            // 顯示使用者訊息
+            const userMsg = document.createElement('div');
+            userMsg.className = 'bg-red-hakka text-white p-3 rounded-tl-xl rounded-bl-xl rounded-br-xl max-w-[80%] self-end ml-auto';
+            userMsg.innerText = input.value;
+            messages.appendChild(userMsg);
+
+            // 模擬讀取中
+            const loadingMsg = document.createElement('div');
+            loadingMsg.className = 'text-xs text-stone-400 italic mt-2';
+            loadingMsg.innerText = '小管家正在思考中...';
+            messages.appendChild(loadingMsg);
+            
+            const query = input.value;
+            input.value = '';
+            messages.scrollTop = messages.scrollHeight;
+
+            setTimeout(() => {
+                loadingMsg.remove();
+                const botMsg = document.createElement('div');
+                botMsg.className = 'bg-stone-100 p-3 rounded-tr-xl rounded-br-xl rounded-bl-xl max-w-[80%]';
+                
+                // 簡單關鍵字判斷
+                if (query.includes('紅棗')) {
+                    botMsg.innerText = "公館紅棗是全台唯一紅棗產區，我們建議用紅棗與枸杞泡茶，能補氣養顏喔！";
+                } else if (query.includes('取貨')) {
+                    botMsg.innerText = "您可以選擇全家、7-11 或在「苗栗客家文化館」現場取貨。";
+                } else {
+                    botMsg.innerText = "這是一個好問題！公館紅棗的特點是果肉紮實且香氣濃郁，這與我們使用的智慧灌溉系統也有關喔。";
+                }
+                
+                messages.appendChild(botMsg);
+                messages.scrollTop = messages.scrollHeight;
+            }, 1000);
+        }
+
+        // 購物車提示
+        function addToCart() {
+            alert('已成功加入購物車！');
+        }
+
+        // 模擬數據動態更新
+        setInterval(() => {
+            // 在實際應用中，這裡會透過 Fetch API 從後端/物聯網平台抓取真實數據
+            console.log('正在更新果園數據...');
+        }, 5000);
+    </script>
+</body>
+</html>
