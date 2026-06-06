@@ -3,401 +3,513 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>公館紅棗智慧商城 | 9款在地精選</title>
-    <!-- 引入 Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- 引入 Lucide 圖標 -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <title>苗栗公館農村社區小舖 | 無添加紅棗乾與健康伴手禮推薦</title>
+    <meta name="description" content="尋找過年長輩送禮推薦？苗栗公館農村社區小舖提供無添加紅棗乾、天然減糖福菜。在地小農直送，是您健康無負擔的伴手禮首選。">
+    
+    <meta property="og:title" content="苗栗公館農村社區小舖 | 無添加紅棗乾與健康伴手禮推薦">
+    <meta property="og:description" content="尋找過年長輩送禮推薦？苗栗公館農村社區小舖提供無添加紅棗乾、天然減糖福菜。在地小農直送，是您健康無負擔的伴手禮首選。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:locale" content="zh_TW">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        // 包含匿名化設定 (Anonymize IP)
+        gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+    </script>
+
     <style>
-        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
-        .bg-red-hakka { background-color: #A61D24; }
-        .text-red-hakka { color: #A61D24; }
-        .border-red-hakka { border-color: #A61D24; }
-        .glass-morphism { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-        .product-card:hover img { transform: scale(1.05); }
+        :root {
+            --bg-color: #F9F8F4;       /* 米白色 */
+            --primary-color: #4A5D4E;  /* 深苔蘚綠 */
+            --accent-color: #8D6E63;   /* 溫暖的木質棕 */
+            --text-dark: #2C3530;
+            --text-light: #FFFFFF;
+            --warning-red: #D32F2F;    /* 亮眼提示色 */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Noto Serif TC', serif;
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 按鈕基礎樣式 */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--warning-red);
+            color: var(--text-light);
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(211, 47, 47, 0.6);
+            background-color: #B71C1C;
+        }
+
+        .btn-secondary {
+            background-color: #3B5998; /* FB 經典藍 */
+            color: var(--text-light);
+            box-shadow: 0 4px 15px rgba(59, 89, 152, 0.3);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(59, 89, 152, 0.5);
+            background-color: #2E4373;
+        }
+
+        /* 第一屏主視覺 (Hero Section) */
+        .hero {
+            background: linear-gradient(rgba(74, 93, 78, 0.8), rgba(74, 93, 78, 0.5)), 
+                        url('https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            padding: 140px 0 100px 0;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .hero h1 {
+            color: var(--text-light);
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero h2 {
+            color: #E0E0E0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        /* 痛點回應區塊 */
+        .pain-point {
+            background-color: #F0EDE5;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .pain-point h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: var(--accent-color);
+        }
+
+        .pain-point p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        /* 特色比較與地方故事區塊 */
+        .features {
+            padding: 100px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1-fraction));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* 信任證據區塊 */
+        .trust {
+            background-color: #FFF;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .trust h2 {
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .trust-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .badge-sgs {
+            display: inline-block;
+            border: 2px dashed var(--accent-color);
+            padding: 10px 20px;
+            color: var(--accent-color);
+            font-weight: 700;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        /* 雙重轉換區塊 (CTA) */
+        .cta-block {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-block h2 {
+            color: var(--text-light);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-block p {
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* 表單與常見問題區塊 */
+        .faq-form-section {
+            padding: 100px 0;
+            background-color: #F4F2EB;
+        }
+
+        .grid-split {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 60px;
+        }
+
+        .faq h2, .contact-form h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            background: #FFF;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .faq-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .contact-form form {
+            background: #FFF;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .btn-submit {
+            background-color: var(--primary-color);
+            color: white;
+            width: 100%;
+            padding: 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* 隱私權保護宣告區塊 */
+        .privacy-declaration {
+            background-color: #EFEFEF;
+            padding: 30px 0;
+            font-size: 0.85rem;
+            color: #666;
+            border-top: 1px solid #DDD;
+        }
+
+        /* 頁腳 (Footer) */
+        footer {
+            background-color: #2C3530;
+            color: #AAA;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* 【響應式 RWD 斷點設定】 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero h2 {
+                font-size: 1.1rem;
+            }
+            .grid-split {
+                grid-template-columns: 1fr;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800">
+<body>
 
-    <!-- 導覽列 -->
-    <nav class="fixed w-full z-50 glass-morphism border-b border-stone-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex items-center gap-2">
-                    <i data-lucide="cherry" class="text-red-600"></i>
-                    <span class="text-xl font-bold tracking-wider text-red-hakka">公館紅棗智慧商城</span>
-                </div>
-                <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="#home" class="hover:text-red-hakka transition">品牌故事</a>
-                    <a href="#monitor" class="hover:text-red-hakka transition">智慧監測</a>
-                    <a href="#shop" class="hover:text-red-hakka transition">商城目錄</a>
-                    <a href="#omo" class="hover:text-red-hakka transition">全通路服務</a>
-                </div>
-                <div class="flex items-center gap-4">
-                    <button class="p-2 hover:bg-stone-100 rounded-full relative">
-                        <i data-lucide="shopping-cart"></i>
-                        <span id="cart-count" class="absolute top-0 right-0 bg-red-hakka text-white text-[10px] rounded-full px-1.2 h-4 w-4 flex items-center justify-center">0</span>
-                    </button>
-                    <button class="md:hidden p-2"><i data-lucide="menu"></i></button>
-                </div>
-            </div>
+    <header class="hero">
+        <div class="container">
+            <h1>公館在地小農直送，無添加紅棗與天然福菜</h1>
+            <h2>守護家人的健康伴手禮，長輩最安心的選擇</h2>
+            <a href="https://www.mainone.com.tw/" class="btn btn-primary track-main-cta">前往農會官網安心結帳</a>
         </div>
-    </nav>
+    </header>
 
-    <!-- 主視覺 (Hero) -->
-    <section id="home" class="relative pt-32 pb-20 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12 relative z-10">
-            <div class="md:w-1/2 space-y-8">
-                <div class="inline-block px-3 py-1 bg-red-100 text-red-hakka text-xs font-bold rounded-full">苗栗公館限定</div>
-                <h1 class="text-5xl md:text-6xl font-bold leading-tight">全台唯一<br><span class="text-red-hakka">紅棗原鄉</span>的純粹</h1>
-                <p class="text-lg text-stone-600 leading-relaxed">
-                    在公館石墻村的陽光下，我們結合物聯網數據與職人手感，將採收後的每一顆鮮棗，透過 AI 監控低溫烘焙，鎖定最飽滿的養分。
-                </p>
-                <div class="flex gap-4">
-                    <a href="#shop" class="bg-red-hakka text-white px-8 py-4 rounded-xl shadow-xl hover:bg-red-800 transition flex items-center gap-2">
-                        立即選購 <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                    <a href="#monitor" class="bg-white border border-stone-200 px-8 py-4 rounded-xl hover:bg-stone-50 transition">
-                        查看即時果園
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2 relative">
-                <div class="rounded-[2rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition duration-500">
-                    <img src="https://img.soundofhope.org/2023-12/1701688344611.png" alt="曬紅棗" class="w-full h-[500px] object-cover">
-                </div>
-                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 border border-stone-100">
-                    <div class="bg-green-100 p-3 rounded-full"><i data-lucide="check-circle" class="text-green-600"></i></div>
-                    <div>
-                        <p class="text-xs text-stone-400 font-bold uppercase">無農藥殘留</p>
-                        <p class="font-bold text-stone-800">411項檢驗合格</p>
-                    </div>
-                </div>
-            </div>
+    <section class="pain-point">
+        <div class="container">
+            <h2>傳統節慶的送禮難題</h2>
+            <p><strong>還在煩惱過節送長輩什麼嗎？擔心市售加工食品負擔太重？</strong><br>
+            苗栗公館農村社區小舖深知您的孝心與顧慮，為您嚴選最天然、無任何化學添加的在地經典美味，讓您的心意既體面又健康無負擔。</p>
         </div>
-        <!-- 背景裝飾 -->
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-red-50 -z-0 opacity-50 rounded-l-[100px]"></div>
     </section>
 
-    <!-- 智慧監測 (AIoT) -->
-    <section id="monitor" class="py-24 bg-stone-100">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">智慧果園：數據透明化</h2>
-                <p class="text-stone-500">透過 AIoT 感測器，您可以即時監控紅棗生長環境，這就是我們的品牌保證。</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white p-8 rounded-3xl border border-stone-200 hover:border-red-200 transition">
-                    <i data-lucide="thermometer" class="text-orange-500 mb-4"></i>
-                    <h4 class="text-stone-400 text-sm">平均氣溫</h4>
-                    <p class="text-3xl font-bold mt-2">26.8°C</p>
+    <section class="features">
+        <div class="container">
+            <h2>黃金小鎮的堅持：為什麼選擇公館紅棗與福菜？</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🌾 100% 產地認證與透明溯源</h3>
+                    <p>介紹公館紅棗的產地認證。每一顆紅棗均來自苗栗公館在地契作農園，具備完整的在地生產履歷，絕非外來混雜劣質品，確保長輩吃得健康有保障。</p>
                 </div>
-                <div class="bg-white p-8 rounded-3xl border border-stone-200 hover:border-red-200 transition">
-                    <i data-lucide="droplets" class="text-blue-500 mb-4"></i>
-                    <h4 class="text-stone-400 text-sm">土壤濕度</h4>
-                    <p class="text-3xl font-bold mt-2">62%</p>
+                <div class="feature-card">
+                    <h3>☀️ 傳承手工日曬工藝</h3>
+                    <p>堅持遵循古法手工日曬催熟，鎖住滿滿的紅棗精華與豐富營養素。果肉飽滿紮實、天然甘甜，是市場上少有的高品質無添加紅棗乾推薦首選。</p>
                 </div>
-                <div class="bg-white p-8 rounded-3xl border border-stone-200 hover:border-red-200 transition">
-                    <i data-lucide="sun" class="text-yellow-500 mb-4"></i>
-                    <h4 class="text-stone-400 text-sm">光照量</h4>
-                    <p class="text-3xl font-bold mt-2">12k Lux</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl border border-stone-200 hover:border-red-200 transition">
-                    <i data-lucide="wind" class="text-green-500 mb-4"></i>
-                    <h4 class="text-stone-400 text-sm">二氧化碳</h4>
-                    <p class="text-3xl font-bold mt-2">415ppm</p>
+                <div class="feature-card">
+                    <h3>🌱 天然減糖無負擔配方</h3>
+                    <p>因應現代上班族與年輕家庭注重健康的養生需求，我們的產品強調天然減糖、無化學防腐劑、無人工色素。即使是傳統福菜也經過減鹽調配，呵護長輩血管防線。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 商品商城 (9個商品) -->
-    <section id="shop" class="py-24 px-4 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <h2 class="text-4xl font-bold">精選商品</h2>
-                    <p class="text-stone-500 mt-2">苗栗公館直送，純天然無添加</p>
+    <section class="trust">
+        <div class="container">
+            <h2>看得到的真誠，放心的信任證據</h2>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <img src="https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=500&q=80" alt="苗栗公館農村社區小舖小農真實採收照片，長輩送禮推薦">
+                    <h4>小農真實採收現場</h4>
+                    <p>公館在地農民細心摘採，從源頭嚴格把關品質。</p>
                 </div>
-                <div class="hidden md:flex gap-2">
-                    <span class="px-4 py-2 bg-stone-100 rounded-full text-sm hover:bg-red-hakka hover:text-white cursor-pointer">全部商品</span>
-                    <span class="px-4 py-2 bg-stone-100 rounded-full text-sm hover:bg-red-hakka hover:text-white cursor-pointer">乾果系列</span>
-                    <span class="px-4 py-2 bg-stone-100 rounded-full text-sm hover:bg-red-hakka hover:text-white cursor-pointer">茶飲系列</span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- 商品 1 -->
-                <div class="product-card group cursor-pointer">
-                    <div class="relative rounded-3xl overflow-hidden aspect-square bg-stone-100">
-                        <img src="https://hips.hearstapps.com/hmg-prod/images/dried-chinese-dates-royalty-free-image-1696581619.jpg?crop=1.00xw:0.752xh;0,0.248xh&resize=1400:*" class="w-full h-full object-cover transition duration-500">
-                        <button onclick="addToCart(350)" class="absolute bottom-4 right-4 bg-white p-4 rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition">
-                            <i data-lucide="plus" class="text-red-hakka"></i>
-                        </button>
-                    </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-bold">石墻特級乾紅棗</h3>
-                        <p class="text-stone-500 text-sm mt-1">公館經典，甜度最高的一等級乾棗。</p>
-                        <p class="text-red-hakka font-bold text-2xl mt-2">$350</p>
-                    </div>
-                </div>
-
-                <!-- 商品 2 -->
-                <div class="product-card group cursor-pointer">
-                    <div class="relative rounded-3xl overflow-hidden aspect-square bg-stone-100">
-                        <img src="https://www.buydirectlyfromfarmers.tw/media/uploads/images/products/2025/07/1.webp">
-                        <button onclick="addToCart(280)" class="absolute bottom-4 right-4 bg-white p-4 rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition">
-                            <i data-lucide="plus" class="text-red-hakka"></i>
-                        </button>
-                    </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-bold">養生紅棗乾 (中袋裝)</h3>
-                        <p class="text-stone-500 text-sm mt-1">家庭裝 300g，入菜燉湯的最佳夥伴。</p>
-                        <p class="text-red-hakka font-bold text-2xl mt-2">$280</p>
-                    </div>
-                </div>
-
-                <!-- 商品 3 -->
-                <div class="product-card group cursor-pointer">
-                    <div class="relative rounded-3xl overflow-hidden aspect-square bg-stone-100">
-                        <img src="https://www.epochtimes.com/_next/image?url=https%3A%2F%2Fi.epochtimes.com%2Fassets%2Fuploads%2F2015%2F10%2Fshutterstock_1164006988.jpg&w=1200&q=75" class="w-full h-full object-cover transition duration-500">
-                        <button onclick="addToCart(420)" class="absolute bottom-4 right-4 bg-white p-4 rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition">
-                            <i data-lucide="plus" class="text-red-hakka"></i>
-                        </button>
-                    </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-bold">紅棗花蜜茶組</h3>
-                        <p class="text-stone-500 text-sm mt-1">內含 10 入茶包與小罐龍眼蜜。</p>
-                        <p class="text-red-hakka font-bold text-2xl mt-2">$420</p>
-                    </div>
-                </div>
-
-                <!-- 商品 4 -->
-                <div class="product-card group cursor-pointer">
-                    <div class="relative rounded-3xl overflow-hidden aspect-square bg-stone-100">
-                        <img src="https://i.epochtimes.com/assets/uploads/2015/10/shutterstock_1160529544.jpg" class="w-full h-full object-cover transition duration-500">
-                        <button onclick="addToCart(180)" class="absolute bottom-4 right-4 bg-white p-4 rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition">
-                            <i data-lucide="plus" class="text-red-hakka"></i>
-                        </button>
-                    </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-bold">天然紅棗手工果醬</h3>
-                        <p class="text-stone-500 text-sm mt-1">減糖配方，吃得到紮實紅棗果肉。</p>
-                        <p class="text-red-hakka font-bold text-2xl mt-2">$180</p>
-                    </div>
-                </div>
-
-                <!-- 商品 5 -->
-                <div class="product-card group cursor-pointer">
-                    <div class="relative rounded-3xl overflow-hidden aspect-square bg-stone-100">
-                        <img src="https://hips.hearstapps.com/hmg-prod/images/%E7%B4%85%E6%A3%97%E6%9E%9C%E5%AF%A6-651fc93e89c4a.jpg?crop=1xw:1xh;center,top" class="w-full h-full object-cover transition duration-500">
-                        <button onclick="addToCart(550)" class="absolute bottom-4 right-4 bg-white p-4 rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition">
-                            <i data-lucide="plus" class="text-red-hakka"></i>
-                        </button>
-                    </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-bold">極致濃縮紅棗精華</h3>
-                        <p class="text-stone-500 text-sm mt-1">無添加水，高壓萃取出的純天然滴紅棗。</p>
-                        <p class="text-red-hakka font-bold text-2xl mt-2">$550</p>
-                    </div>
-                </div>
-
-                <!-- 商品 6 -->
-                <div class="product-card group cursor-pointer">
-                    <div class="relative rounded-3xl overflow-hidden aspect-square bg-stone-100">
-                        <img src="https://hips.hearstapps.com/hmg-prod/images/%E7%B4%85%E6%A3%97%E6%9E%9C%E5%AF%A6-651fc93e89c4a.jpg?crop=1xw:1xh;center,top" class="w-full h-full object-cover transition duration-500">
-                        <button onclick="addToCart(320)" class="absolute bottom-4 right-4 bg-white p-4 rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition">
-                            <i data-lucide="plus" class="text-red-hakka"></i>
-                        </button>
-                    </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-bold">紅棗養生黑豆茶</h3>
-                        <p class="text-stone-500 text-sm mt-1">低溫烘焙黑豆與切片紅棗，去寒補氣。</p>
-                        <p class="text-red-hakka font-bold text-2xl mt-2">$320</p>
-                    </div>
-                </div>
-
-                <!-- 商品 7 -->
-                <div class="product-card group cursor-pointer">
-                    <div class="relative rounded-3xl overflow-hidden aspect-square bg-stone-100">
-                        <img src="https://img.ltn.com.tw/Upload/food/page/2016/10/16/161016-4747-0-CsLi7.jpg">
-                        <button onclick="addToCart(480)" class="absolute bottom-4 right-4 bg-white p-4 rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition">
-                            <i data-lucide="plus" class="text-red-hakka"></i>
-                        </button>
-                    </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-bold">紅棗釀果醋 (兩年熟成)</h3>
-                        <p class="text-stone-500 text-sm mt-1">幫助消化、調整體質的最佳選擇。</p>
-                        <p class="text-red-hakka font-bold text-2xl mt-2">$480</p>
-                    </div>
-                </div>
-
-                <!-- 商品 8 -->
-                <div class="product-card group cursor-pointer">
-                    <div class="relative rounded-3xl overflow-hidden aspect-square bg-stone-100">
-                        <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1654072364-673d994302451.jpg?crop=1xw:1xh;center,top" class="w-full h-full object-cover transition duration-500">
-                        <button onclick="addToCart(250)" class="absolute bottom-4 right-4 bg-white p-4 rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition">
-                            <i data-lucide="plus" class="text-red-hakka"></i>
-                        </button>
-                    </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-bold">紅棗脆片 (無加糖)</h3>
-                        <p class="text-stone-500 text-sm mt-1">凍乾技術，像餅乾一樣酥脆的健康零食。</p>
-                        <p class="text-red-hakka font-bold text-2xl mt-2">$250</p>
-                    </div>
-                </div>
-
-                <!-- 商品 9 -->
-                <div class="product-card group cursor-pointer">
-                    <div class="relative rounded-3xl overflow-hidden aspect-square bg-stone-100">
-                        <img src="https://hips.hearstapps.com/hmg-prod/images/jujube-dried-chinese-red-date-royalty-free-image-1770610519.pjpeg?crop=1.00xw:1.00xh;0,0" class="w-full h-full object-cover transition duration-500">
-                        <button onclick="addToCart(990)" class="absolute bottom-4 right-4 bg-white p-4 rounded-2xl shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition">
-                            <i data-lucide="plus" class="text-red-hakka"></i>
-                        </button>
-                    </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-bold">公館紅棗精品禮盒</h3>
-                        <p class="text-stone-500 text-sm mt-1">含乾果、精華飲與花布袋，送禮首選。</p>
-                        <p class="text-red-hakka font-bold text-2xl mt-2">$990</p>
-                    </div>
+                <div class="trust-card">
+                    <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=500&q=80" alt="苗栗紅棗禮盒符合國家級檢驗標準，無添加紅棗乾推薦">
+                    <h4>SGS 國家級檢驗合格</h4>
+                    <p>通過 381 項農藥殘留檢驗，重金屬全面零檢出。</p>
+                    <span class="badge-sgs">SGS 檢驗合格標示</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- OMO 全通路展示 -->
-    <section id="omo" class="py-24 bg-stone-900 text-white overflow-hidden relative">
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="space-y-6">
-                    <h2 class="text-4xl font-bold">全通路 (OMO) 配送服務</h2>
-                    <p class="text-stone-400 text-lg">
-                        根據《臺灣零售業全通路策略》研究，我們提供您最彈性的取貨方式。
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/10 transition">
-                            <i data-lucide="truck" class="text-red-400"></i>
-                            <div>
-                                <p class="font-bold">產地直送宅配</p>
-                                <p class="text-sm text-stone-500">當日採收，隔日新鮮到貨</p>
-                            </div>
+    <section class="cta-block">
+        <div class="container">
+            <h2>今天，就為長輩遞上一份安心的健康心意</h2>
+            <p>實體園區因距離遙遠購買不易？別擔心，現在透過官網，產地直送即刻送到家。</p>
+            <div class="cta-buttons">
+                <a href="https://www.mainone.com.tw/" class="btn btn-primary track-main-cta">前往農會官網安心結帳</a>
+                <a href="https://www.facebook.com/" target="_blank" class="btn btn-secondary track-sub-cta">加入 FB 社群，索取專屬養生食譜</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-form-section">
+        <div class="container">
+            <div class="grid-split">
+                <div class="faq">
+                    <h2>常見問題 QA</h2>
+                    <div class="faq-item">
+                        <h4>Q1: 紅棗乾真的是完全無添加嗎？</h4>
+                        <p>是的，公館鄉農會出產的紅棗乾堅持完全不添加人工防腐劑、防蟻劑與二氧化硫。完全靠手工日曬與低溫烘焙技術保存，因此顏色呈現自然的深紅褐色。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q2: 下單後大概幾天可以收到？</h4>
+                        <p>收到訂單後，我們將於 24 小時內由苗栗公館農會產地直接出貨，物流時間約 2-3 個工作天即可送達指定的上班族公司或年轻家庭地址。</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>留下聯絡資訊，獲取最新小農優惠</h2>
+                    <form id="landingForm">
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" placeholder="請輸入姓名" required>
                         </div>
-                        <div class="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/10 transition">
-                            <i data-lucide="map-pin" class="text-red-400"></i>
-                            <div>
-                                <p class="font-bold">苗栗文化館線下領貨</p>
-                                <p class="text-sm text-stone-500">線上付款，憑 QR Code 享專人取件服務</p>
-                            </div>
+                        <div class="form-group">
+                            <label for="email">電子信箱</label>
+                            <input type="email" id="email" placeholder="請輸入 Email" required>
                         </div>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=400" class="rounded-2xl shadow-2xl h-48 w-full object-cover">
-                    <img src="https://images.unsplash.com/photo-1574630133144-0d8537463240?auto=format&fit=crop&q=80&w=400" class="rounded-2xl shadow-2xl h-48 w-full object-cover mt-8">
+                        <div class="form-group">
+                            <label for="note">想詢問的商品需求</label>
+                            <textarea id="note" rows="3" placeholder="例如：過年長輩送禮推薦大宗採購諮詢..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">送出諮詢資訊</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AI 助理 -->
-    <div id="ai-widget" class="fixed bottom-6 right-6 z-50">
-        <div id="ai-chat" class="hidden flex flex-col w-80 h-96 bg-white rounded-3xl shadow-2xl border border-stone-100 mb-4 overflow-hidden animate-in fade-in slide-in-from-bottom-4">
-            <div class="bg-red-hakka p-5 text-white flex justify-between items-center">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                        <i data-lucide="bot" class="w-6 h-6"></i>
-                    </div>
-                    <div>
-                        <p class="text-sm font-bold leading-tight">紅棗小管家</p>
-                        <p class="text-[10px] opacity-70">Gemini Powered AI</p>
-                    </div>
-                </div>
-                <button onclick="toggleAI()"><i data-lucide="x" class="w-5 h-5"></i></button>
-            </div>
-            <div id="chat-messages" class="flex-1 p-5 overflow-y-auto space-y-4 text-sm bg-stone-50">
-                <div class="bg-white p-4 rounded-2xl shadow-sm border border-stone-200">
-                    您好！我是您的紅棗推薦官。需要我幫您挑選這 9 款中的哪一款嗎？或是想了解紅棗與客家文化？
-                </div>
-            </div>
-            <div class="p-4 border-t bg-white flex gap-2">
-                <input type="text" id="ai-input" placeholder="問問紅棗怎麼煮..." class="flex-1 bg-stone-100 border-none rounded-2xl px-4 py-2 text-sm focus:ring-2 focus:ring-red-hakka outline-none">
-                <button onclick="sendAIQuery()" class="bg-red-hakka text-white p-2 rounded-xl">
-                    <i data-lucide="send" class="w-5 h-5"></i>
-                </button>
-            </div>
+    <div class="privacy-declaration">
+        <div class="container">
+            <p><strong>【數據分析倫理與隱私權宣告】</strong> 本網頁內嵌 Google Analytics 4 (GA4) 數據追蹤服務，我們嚴格遵守個人資料保護法，所有收集之瀏覽足跡（如點擊行為、停留時間）均已進行匿名化與去識別化技術處理（Anonymize IP），僅用於優化本站之使用者體驗與行銷策略。我們承諾絕不將您的個人隱私資料轉售或外洩給第三方機構。</p>
         </div>
-        <button onclick="toggleAI()" class="bg-red-hakka text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition active:scale-95">
-            <i data-lucide="sparkles" class="w-8 h-8"></i>
-        </button>
     </div>
 
-    <!-- 頁尾 -->
-    <footer class="bg-stone-50 py-16 border-t">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="flex items-center justify-center gap-2 mb-6">
-                <i data-lucide="cherry" class="text-red-hakka"></i>
-                <span class="text-xl font-bold text-red-hakka uppercase tracking-tighter">Gong Guan Jujube</span>
-            </div>
-            <p class="text-stone-400 text-sm max-w-md mx-auto leading-loose">
-                支持苗栗小農，推廣智慧農業。我們致力於將傳統文化透過數位工具傳遞到每個角落。
-            </p>
-            <div class="mt-8 pt-8 border-t border-stone-200 text-xs text-stone-400">
-                &copy; 2026 公館紅棗文創電商專題製作. 所有內容僅供學習展示參考.
-            </div>
+    <footer>
+        <div class="container">
+            <p>聯絡人：張景雅、郎郁婷、劉佳玲、范恩慈、陳姿吟</p>
+            <p>服務專線：(037) 225-211 | 電子信箱：service@gongguan.org.tw</p>
+            <p>© 2026 苗栗縣公館鄉農會農村社區小舖. All Rights Reserved. 隱私權政策</p>
         </div>
     </footer>
 
     <script>
-        lucide.createIcons();
-
-        let count = 0;
-        function addToCart(price) {
-            count++;
-            document.getElementById('cart-count').innerText = count;
-            const notification = document.createElement('div');
-            notification.className = 'fixed top-20 right-4 bg-green-600 text-white px-6 py-3 rounded-xl shadow-2xl z-[100] animate-bounce';
-            notification.innerText = '✨ 成功加入購物車！';
-            document.body.appendChild(notification);
-            setTimeout(() => notification.remove(), 2000);
-        }
-
-        function toggleAI() {
-            const chat = document.getElementById('ai-chat');
-            chat.classList.toggle('hidden');
-        }
-
-        function sendAIQuery() {
-            const input = document.getElementById('ai-input');
-            const messages = document.getElementById('chat-messages');
-            if (!input.value.trim()) return;
-
-            const userDiv = document.createElement('div');
-            userDiv.className = 'bg-red-hakka text-white p-4 rounded-2xl shadow-sm self-end ml-8 text-right';
-            userDiv.innerText = input.value;
-            messages.appendChild(userDiv);
+        document.addEventListener("DOMContentLoaded", function() {
             
-            const val = input.value;
-            input.value = '';
-            messages.scrollTop = messages.scrollHeight;
+            // 1. 主要 CTA 按鈕「前往農會官網安心結帳」綁定點擊事件
+            const mainCtaButtons = document.querySelectorAll(".track-main-cta");
+            mainCtaButtons.forEach(button => {
+                button.addEventListener("click", function(e) {
+                    // 發送 GA4 自訂事件
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'click_outbound_buy', {
+                            'event_category': 'Outbound CTA',
+                            'event_label': '前往農會官網安心結帳',
+                            'transport_type': 'beacon'
+                        });
+                        console.log("GA4 Event Triggered: click_outbound_buy");
+                    }
+                });
+            });
 
-            setTimeout(() => {
-                const botDiv = document.createElement('div');
-                botDiv.className = 'bg-white p-4 rounded-2xl shadow-sm border border-stone-200 mr-8';
-                
-                if(val.includes('取貨')) {
-                    botDiv.innerText = "我們支援全台宅配與線下取貨。根據您在「好客商城」的權益，滿千即享苗栗地區免費外送喔！";
-                } else if(val.includes('推薦')) {
-                    botDiv.innerText = "如果您是第一次購買，我強烈推薦「石墻特級乾紅棗」，這是我們公館的冠軍商品，甜度非常迷人！";
-                } else {
-                    botDiv.innerText = "這是一個關於公館紅棗很好的問題。公館因地形優勢，紅棗風味全台之冠。您也可以試試我們的「紅棗釀果醋」來調理體質喔。";
-                }
-                
-                messages.appendChild(botDiv);
-                messages.scrollTop = messages.scrollHeight;
-            }, 800);
-        }
+            // 2. 次要 CTA 按鈕「加入 FB 社群」綁定點擊事件
+            const subCtaButton = document.querySelector(".track-sub-cta");
+            if (subCtaButton) {
+                subCtaButton.addEventListener("click", function() {
+                    // 發送 GA4 自訂事件
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'click_join_fb', {
+                            'event_category': 'Social CTA',
+                            'event_label': '加入 FB 社群，索取專屬養生食譜'
+                        });
+                        console.log("GA4 Event Triggered: click_join_fb");
+                    }
+                });
+            }
+
+            // 3. 表單送出模擬提示
+            const form = document.getElementById("landingForm");
+            if (form) {
+                form.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    alert("諮詢表單已成功模擬送出！感謝您支持苗栗在地農業與小農伴手禮。");
+                    form.reset();
+                });
+            }
+        });
     </script>
 </body>
 </html>
